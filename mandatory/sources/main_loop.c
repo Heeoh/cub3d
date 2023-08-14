@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_loop.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heson <heson@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: inskim <inskim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 19:18:56 by inskim            #+#    #+#             */
-/*   Updated: 2023/08/11 13:17:46 by heson            ###   ########.fr       */
+/*   Updated: 2023/08/14 16:42:40 by inskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,12 +90,13 @@ int	main(int argc, char **argv)
 	if (init(argv[1], &game_info) == ERROR_INT)
 	{
 		destroy_game(&game_info);
-		return (1);
+		exit (1);
 	}
 	if (init_door_timer(&game_info) == ERROR_INT)
 	{
 		destroy_game(&game_info);
-		return (print_error(ERROR_MALLOC, ERROR_INT));
+		print_error(ERROR_MALLOC, ERROR_INT);
+		exit (1);
 	}
 	print_img(&game_info);
 	mlx_hook(game_info.win, ON_KEYDOWN, 0, handle_key, &game_info);
@@ -104,6 +105,5 @@ int	main(int argc, char **argv)
 	mlx_loop_hook(game_info.mlx, handle_frame, &game_info);
 	mlx_loop(game_info.mlx);
 	destroy_game(&game_info);
-	handle_frame(&game_info);
 	return (0);
 }

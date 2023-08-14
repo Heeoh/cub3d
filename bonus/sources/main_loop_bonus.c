@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_loop_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heson <heson@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: inskim <inskim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 19:18:56 by inskim            #+#    #+#             */
-/*   Updated: 2023/08/14 16:31:54 by heson            ###   ########.fr       */
+/*   Updated: 2023/08/14 16:40:00 by inskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,5 @@ int	main(int argc, char **argv)
 	mlx_loop_hook(game_info.mlx, handle_frame, &game_info);
 	mlx_loop(game_info.mlx);
 	destroy_game(&game_info);
-	handle_frame(&game_info);
 	return (0);
 }

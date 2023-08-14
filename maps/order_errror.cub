@@ -1,4 +1,15 @@
 
+C 225,30,1
+WE   ./imgs/west.xpm
+SO ./imgs/google_img
+EA ./imgs/east.xpm
+
+NO ./imgs/north.xpm
+
+
+
+F 220,100,0
+
 
 1111111111111111111111111
 1000000000110000000000001
