@@ -6,7 +6,7 @@
 /*   By: heson <heson@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 19:18:56 by inskim            #+#    #+#             */
-/*   Updated: 2023/08/14 16:39:43 by heson            ###   ########.fr       */
+/*   Updated: 2023/08/14 16:48:41 by heson            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,5 +106,9 @@ int	main(int argc, char **argv)
 	mlx_mouse_hide();
 	mlx_loop_hook(game_info.mlx, handle_frame, &game_info);
 	mlx_loop(game_info.mlx);
+<<<<<<< HEAD
+=======
+	destroy_game(&game_info);
+>>>>>>> 5ef431943c6b9f3841838a3848b04dd6466e12c3
 	return (0);
 }
